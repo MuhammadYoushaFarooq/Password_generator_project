@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card password_card">
+        <div class="password_display">
+          <input type="text" id="password" readonly />
+          <button id="copy_btn">
+            <span class="tooltip">Copy</span>
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#546E7A"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="display: block; margin: auto"
+            >
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+              <path
+                d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+              />
+            </svg>
+          </button>
+          <button id="refresh_btn">
+            <span class="tooltip">Generate</span>
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#546E7A"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="display: block; margin: auto"
+            >
+              <path d="M21 2v6h-6" />
+              <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+              <path d="M21 22v-6h-6" />
+              <path d="M3 12a9 9 0 0 0 15 6.7l3-2.7" />
+            </svg>
+          </button>
+        </div>
+        <div class="password_strength_bar">
+          <div class="strength_fill" id="strength-fill"></div>
+        </div>
+      </div>
+      <div class="card customize_card">
+        <div class="customize_panel">
+          <h2>Customize your password</h2>
+          <div class="row">
+            <label>Password Length</label>
+            <input type="range" id="length" min="6" max="32" value="12" />
+            <input type="number" id="length-num" min="6" max="32" value="12" />
+          </div>
+          <div class="options">
+            <label
+              ><input type="checkbox" id="uppercase" checked /> Uppercase</label
+            >
+            <label
+              ><input type="checkbox" id="lowercase" checked /> Lowercase</label
+            >
+            <label
+              ><input type="checkbox" id="numbers" checked /> Numbers</label
+            >
+            <label
+              ><input type="checkbox" id="symbols" checked /> Symbols</label
+            >
+            <label
+              ><input type="radio" name="chars" id="all" checked /> All
+              characters</label
+            >
+            <label
+              ><input type="radio" name="chars" id="easy_say" /> Easy to
+              say</label
+            >
+            <label
+              ><input type="radio" name="chars" id="easy_read" /> Easy to
+              read</label
+            >
+          </div>
+        </div>
+        <button class="copy_password_btn" id="copy_password">
+          Copy password
+        </button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
